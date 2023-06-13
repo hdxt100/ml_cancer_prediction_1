@@ -9,7 +9,7 @@ from sklearn.ensemble import (
 	    RandomForestClassifier,
 	)
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import r2_score
+from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from xgboost import XGBClassifier
@@ -111,8 +111,8 @@ class ModelTrainer:
 	
 	            predicted=best_model.predict(X_test)
 	
-	            r2_square = r2_score(y_test, predicted)
-	            return r2_square
+	            a_score = accuracy_score(y_test, predicted)
+	            return a_score
 	            
 	
 	

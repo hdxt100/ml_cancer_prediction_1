@@ -1,0 +1,102 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Cancer Prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint') }}" method="POST">
+        <h1>
+            <legend>Patient's Cancer Prediction Status</legend>
+        </h1>
+
+        <div class="form-group">
+            <label for="radius_mean">Radius_Mean:</label>
+            <input type="number" id="radius_mean" name="radius_mean" placeholder="Enter your radius_mean">
+        </div>
+        <div class="form-group">
+            <label for="texture_mean">Texture_Mean:</label>
+            <input type="number" id="texture_mean" name="texture_mean" placeholder="Enter your texture_mean">
+        </div>
+        <div class="form-group">
+            <label for="smoothness_mean">Smoothness_Mean:</label>
+            <input type="number" id="smoothness_mean" name="smoothness_mean" placeholder="Enter your smoothness_mean">
+        </div>
+        <div class="form-group">
+            <label for="compactness_mean">Compactness_Mean:</label>
+            <input type="number" id="compactness_mean" name="compactness_mean" placeholder="Enter your compactness_mean">
+        </div>
+        
+        
+        
+        <div class="form-group">
+            <label for="concavity_mean">Concavity_Mean:</label>
+            <input type="number" id="concavity_mean" name="concavity_mean" placeholder="Enter your concavity_mean">
+        </div>
+        
+        <div class="form-group">
+            <label for="symmetry_mean">Symmetry_Mean:</label>
+            <input type="number" id="symmetry_mean" name="symmetry_mean" placeholder="Enter your symmetry_mean">
+        </div>
+        <div class="form-group">
+            <label for="fractal_dimension_mean">Fractal_Dimension_Mean:</label>
+            <input type="number" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Enter your fractal_dimension_mean">
+        </div>
+        <div class="form-group">
+            <label for="radius_se">Radius_Se:</label>
+            <input type="number" id="radius_se" name="radius_se" placeholder="Enter your radius_se">
+        </div>
+        
+        <div class="form-group">
+            <label for="texture_se">Texture_Se:</label>
+            <input type="number" id="texture_se" name="texture_se" placeholder="Enter your texture_se">
+        </div>
+        <div class="form-group">
+            <label for="smoothness_se">Smoothness_Se:</label>
+            <input type="number" id="smoothness_se" name="smoothness_se" placeholder="Enter your smoothness_se">
+        </div>
+        <div class="form-group">
+            <label for="compactness_se">Compactness_Se:</label>
+            <input type="number" id="compactness_se" name="compactness_se" placeholder="Enter your compactness_se">
+        </div>
+        <div class="form-group">
+            <label for="concavity_se">Concavity_Se:</label>
+            <input type="number" id="concavity_se" name="concavity_se" placeholder="Enter your concavity_se">
+        </div>
+        <div class="form-group">
+            <label for="concave_points_se">Concave points_Se:</label>
+            <input type="number" id="concave_points_se" name="concave_points_se" placeholder="Enter your concave_points_se">
+        </div>
+        <div class="form-group">
+            <label for="symmetry_se">Symmetry_Se:</label>
+            <input type="number" id="symmetry_se" name="symmetry_se" placeholder="Enter your symmetry_se">
+        </div>
+        <div class="form-group">
+            <label for="fractal_dimension_se">Fractal_dimension_Se:</label>
+            <input type="number" id="fractal_dimension_se" name="fractal_dimension_se" placeholder="Enter your fractal_dimension_se">
+        </div>
+        <div class="form-group">
+            <label for="smoothness_worst">Smoothness_Worst:</label>
+            <input type="number" id="smoothness_worst" name="smoothness_worst" placeholder="Enter your smoothness_worst">
+        </div>
+        <div class="form-group">
+            <label for="compactness_worst">Compactness_Worst:</label>
+            <input type="number" id="compactness_worst" name="compactness_worst" placeholder="Enter your compactness_worst">
+        </div>
+        <div class="form-group">
+            <label for="symmetry_worst">Symmetry_Worst:</label>
+            <input type="number" id="symmetry_worst" name="symmetry_worst" placeholder="Enter your symmetry_worst">
+        </div>
+        <div class="form-group">
+            <label for="fractal_dimension_worst">Fractal_Dimension_Worst:</label>
+            <input type="number" id="fractal_dimension_worst" name="fractal_dimension_worst" placeholder="Enter your fractal_dimension_worst">
+        </div>
+        
+        <div style="clear:both;"></div>
+            <input type="submit" value="Submit">
+    </form>
+    </div>
+    <div>      
+    <h2>
+      Predicted Cancer 'Malignant - 1','Benign - 0' is : {{ results }}
+    </h2>
+  </body>
+</html>
